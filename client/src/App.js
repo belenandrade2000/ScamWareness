@@ -63,9 +63,6 @@ function App() {
               />
               <Route 
                 path="/me"
-
-                path="/"
-                element={<Home />}
               />
               <Route 
                 path="/login" 
@@ -88,10 +85,6 @@ function App() {
 
                 path="/creditcards"
                 element={<Profile />}
-              />
-
-                path="/thoughts/:thoughtId" 
-                element={<SingleThought />}
               />
 
             </Routes>
