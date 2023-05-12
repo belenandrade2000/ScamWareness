@@ -1,26 +1,33 @@
-# ScamWareness
+# CardGenie
+This is a website that allows users to search for potential credit cards, compare credit cards, and leave reviews and ratings for credit cards. Users can search for credit cards by categories such as rewards, cashback, travel, and more. The website aims to help users make informed decisions when choosing a credit card that suits their financial needs.
 
-## Description
-Welcome to the ScamWareness! This is a web application that allows users to report potential scammers and look up previous scammers reported by others. The purpose of this application is to help people avoid falling victim to scams and to raise awareness about common types of scams.
+## Features
+Credit Card Search: Users can search for credit cards based on their preferred categories such as rewards, cashback, travel, etc.
+Credit Card Comparison: Users can compare credit cards side by side, based on various features such as interest rates, annual fees, reward programs, etc.
+Credit Card Reviews and Ratings: Users can leave reviews and ratings for credit cards they have used or are currently using. These reviews and ratings can help other users make better decisions when selecting a credit card.
+Getting Started
+To use the website, simply navigate to the homepage and start searching for credit cards. You can browse through various categories or use the search bar to find specific credit cards. Once you find a credit card that interests you, click on it to view more details and user reviews.
 
-## Usage and Instructions
-To use the Scam Tracking Application, simply visit the website and create an account. Once you have an account, you can report potential scammers and search for scammers reported by others. 
+## Technologies Used
+Front-end: HTML, CSS, JavaScript, React.js
+Back-end: Node.js, Express.js, MongoDB
+APIs: Credit card data API (e.g. NerdWallet, Credit Karma, Bankrate)
+Authentication: JWT (JSON Web Tokens)
 
-Reporting a Scammer
-To report a scammer, click on the "Report Scammer" button and fill out the form with as much information as possible. This includes the scammer's name, email address, phone number, and any other details you have about the scam. 
-
-Searching for Scammers
-To search for scammers reported by others, click on the "Search Scammers" button and enter your search criteria. You can search by name, email address, phone number, or keywords related to the scam. You can also filter the results by location, scam type, or date of the report.
-
-## Privacy and Security
-At ScamWareness, we take your privacy and security seriously. All user data is encrypted and stored securely. However, please note that we cannot guarantee the accuracy or completeness of the information on our site, as it is provided by users and may be subject to errors or fraud.
+## Installation
+To install and run the website locally, follow these steps:
+Clone the repository to your local machine.
+Install dependencies by running npm install in the root directory.
+Create a .env file in the root directory with the following variables:
+DATABASE_URL (your MongoDB database URL)
+SECRET_KEY (your JWT secret key)
+Start the server by running npm start in the root directory.
+Navigate to http://localhost:3000 to view the website.
 
 ## Contributing
-If you would like to contribute to the ScamWareness,
-
-## License
-The Scam Tracking Application is licensed under the MIT License. See LICENSE for more information.
+If you would like to contribute to the development of this website, 
 
 ## Credits
 
 ## Questions
+
