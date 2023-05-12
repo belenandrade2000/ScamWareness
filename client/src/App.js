@@ -49,6 +49,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
+
                 path="/" 
                 element={<Home />} 
               />
@@ -62,6 +63,21 @@ function App() {
               />
               <Route 
                 path="/me"
+
+                path="/"
+                element={<Home />}
+              />
+              <Route 
+                path="/login" 
+                element={<Login />}
+              />
+              <Route 
+                path="/signup" 
+                element={<Signup />}
+              />
+              <Route 
+                path="/me" 
+
                 element={<Profile />}
               />
               <Route 
@@ -69,10 +85,15 @@ function App() {
                 element={<Profile />}
               />
               <Route 
+
                 path="/creditcards"
                 element={<Profile />}
               />
-              
+
+                path="/thoughts/:thoughtId" 
+                element={<SingleThought />}
+              />
+
             </Routes>
           </div>
           <Footer />
