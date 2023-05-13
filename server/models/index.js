@@ -1,3 +1,5 @@
 const User = require('./User');
+const creditcards = require('./creditcards');
 
-module.exports = { User };
+module.exports = { User, creditcards };
+

@@ -23,17 +23,8 @@ const creditCardsSchema = new Schema({
     required: true,
     trim: true,
   },
-  ccIntroOffer: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  ccLink: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  ccExtraInfo: {
+  ccImage: {
+    // url into string of cloudanary image url
     type: String,
     required: true,
     trim: true,
