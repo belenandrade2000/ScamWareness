@@ -9,7 +9,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+    <header>
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
         <Link className="text-dark" to="/">
           <h1 className="m-0" style={{ fontSize: '3rem' }}>
@@ -20,18 +20,11 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-            <Link className="btn btn-lg btn-primary m-2" to="/me">
-                Credit Cards
-              </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                Home
-              </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                My Profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
+           <button> Credit Cards</button>
+           <button> Home</button>
+           <button> My Profile</button>
+          <button onClick={logout}>Logout</button>
+
             </>
           ) : (
             <>
