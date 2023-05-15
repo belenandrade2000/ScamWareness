@@ -1,9 +1,10 @@
 const db = require('../config/connection');
 const { User, Review } = require('../models');
-const userSeeds = require('./userSeeds.json');
-const reviewSeeds = require('./reviewSeeds.json');
+const userSeeds = require('./userseeds.json');
+const reviewSeeds = require('./reviewseeds.json');
 
 db.once('open', async () => {
+
   try {
     await Review.deleteMany({});
     await User.deleteMany({});
@@ -25,6 +26,9 @@ db.once('open', async () => {
     console.error(err);
     process.exit(1);
   }
+
+    
+ 
 
   console.log('all done!');
   process.exit(0);

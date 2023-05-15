@@ -58,56 +58,9 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addComment: async (parent, { reviewId, commentText }, context) => {
-      if (context.user) {
-        return Review.findOneAndUpdate(
-          { _id: reviewId },
-          {
-            $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeReview: async (parent, { reviewId }, context) => {
-      if (context.user) {
-        const review = await Review.findOneAndDelete({
-          _id: reviewId,
-          reviewAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { reviews: review._id } }
-        );
-
-        return review;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeComment: async (parent, { reviewId, commentId }, context) => {
-      if (context.user) {
-        return Review.findOneAndUpdate(
-          { _id: reviewId },
-          {
-            $pull: {
-              comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+   
+   
+   
   },
 };
 
