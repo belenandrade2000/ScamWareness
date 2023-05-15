@@ -26,12 +26,14 @@ const creditCardsSchema = new Schema({
   ccImage: {
     // url into string of cloudanary image url
     type: String,
-    required: true,
     trim: true,
   },
- 
+  reviews: [{
+    type: Schema.Types.ObjectId,
+    ref: "Review"
+  }]
 });
 
-const creditCard = model('CreditCard', creditCardsSchema);
+const CreditCard = model('CreditCard', creditCardsSchema);
 
-module.exports = creditCard;
+module.exports = CreditCard;

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Review } = require('../models');
+const { User, Review, CreditCards } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -10,19 +10,13 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('reviews');
     },
-    reviews: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Review.find(params).sort({ createdAt: -1 });
+    creditCards: async () => {
+      return CreditCards.find();
     },
-    review: async (parent, { reviewId }) => {
-      return Review.findOne({ _id: reviewId });
+    creditCard: async (parent, { creditCardId }) => {
+      return CreditCards.findOne({ _id: creditCardId }).populate("reviews");
     },
-    me: async (parent, args, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('reviews');
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+   
   },
 
   Mutation: {
