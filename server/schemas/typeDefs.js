@@ -1,7 +1,14 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type CreditCard {
+type User {
+  _id: ID
+  username: String
+  email: String
+  password: String
+}
+
+type CreditCard {
     id: ID!
     ccName: String
     ccType: String
@@ -11,6 +18,14 @@ const typeDefs = gql`
     ccImage: String
   }
 
+  type Review {
+    _id: ID
+    reviewText: String
+    reviewAuthor: String
+   
+}
+
+  
  type Query {
     creditCards: [CreditCard]
     creditCard(creditCardId: ID): CreditCard
@@ -18,18 +33,22 @@ const typeDefs = gql`
     user(username: String): User
   }
 
+
   type Auth {
     token: ID!
-    profile: Profile
+   
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
+    addUser(email: String, username: String, password: String): Auth  
     login(email: String!, password: String!): Auth
+    addReview(reviewText: String): Review
 
-    #is this right?
-    #addSavedCC(profileId: ID!, skill: String!): Profile
-    #removeProfile: Profile
+      
+
+
+  
+   
 
 
   }
