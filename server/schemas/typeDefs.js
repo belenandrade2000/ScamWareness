@@ -2,6 +2,24 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type CreditCard {
+    id: ID!
+    name: String!
+    benefits: [String!]!
+    annualFee: Float!
+  }
+
+ type Query {
+    creditCards: [CreditCard!]!
+    creditCard(id: ID!): CreditCard!
+  }
+
+  type Mutation {
+    addCreditCard(name: String!, benefits: [String!]!, annualFee: Float!): CreditCard!
+    updateCreditCard(id: ID!, name: String, benefits: [String], annualFee: Float): CreditCard!
+    deleteCreditCard(id: ID!): CreditCard!
+  }
+
+  type Profile {
     _id: ID
     ccName: String
     ccBenefits: String
@@ -25,10 +43,14 @@ const typeDefs = gql`
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
+
+
     // is this right?
     addSavedCC(profileId: ID!, skill: String!): Profile
     removeProfile: Profile
     removeSkill(skill: String!): Profile
+
+
   }
 `;
 
