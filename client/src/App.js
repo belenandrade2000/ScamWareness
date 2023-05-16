@@ -71,13 +71,14 @@ function App() {
                 path="/profiles/:username" 
                 element={<Profile />}
               />
-              <Route 
+              {/* <Route 
                 path="/creditcards"
                 element={<ccHome />}
               />
               <Route 
                 path="/creditcards/:creditcard"
                 element={<ccHome />}
+
               /> */}
 
             </Routes>
