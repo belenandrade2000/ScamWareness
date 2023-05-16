@@ -32,3 +32,12 @@ export const QUERY_ME = gql`
     }
   }
 `;
+export const QUERY_USER = gql`
+  query me {
+    me {
+      _id
+      name
+      skills
+    }
+  }
+`;
