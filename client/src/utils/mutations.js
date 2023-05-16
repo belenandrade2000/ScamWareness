@@ -1,10 +1,10 @@
 import { gql } from '@apollo/client';
 
-export const ADD_PROFILE = gql`
-  mutation addProfile($name: String!, $email: String!, $password: String!) {
-    addProfile(name: $name, email: $email, password: $password) {
+export const ADD_USER = gql`
+  mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(name: $username, email: $email, password: $password) {
       token
-      profile {
+      user {
         _id
         name
       }
@@ -23,7 +23,8 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-export const ADD_CC = gql`
+// need help with these two
+export const ADD_SAVEDCC = gql`
   mutation addCC($profileId: ID!, $skill: String!) {
     addCC(profileId: $profileId, skill: $skill) {
       _id
@@ -32,7 +33,7 @@ export const ADD_CC = gql`
     }
   }
 `;
-export const REMOVE_CC = gql`
+export const REMOVE_SAVEDCC = gql`
   mutation removeCC($skill: String!) {
     removeCC(skill: $skill) {
       _id

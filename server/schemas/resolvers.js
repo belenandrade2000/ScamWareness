@@ -5,17 +5,24 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('reviews');
+      return User.find().populate('users');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('reviews');
+      return User.findOne({ username }).populate('users');
     },
     creditCards: async () => {
       return CreditCards.find();
     },
     creditCard: async (parent, { creditCardId }) => {
-      return CreditCards.findOne({ _id: creditCardId }).populate("reviews");
+      return CreditCards.findOne({ _id: creditCardId }).populate("creditcards");
     },
+    reviews: async () => {
+      return User.find().populate('reviews');
+    },
+    review: async () => {
+      return User.find().populate('reviews');
+    },
+    
    
   },
 
@@ -58,6 +65,17 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    addSavedCC: async (parent, {CreditCardId}, context)=> {
+      if (context.user) {
+        const user = await User.findOneAndUpdate(
+          // find user and update their profile with a cc
+          { _id: context.user._id },
+          { $addToSet: { savedCC: CreditCardId} }
+        );
+        return user;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    }
    
    
    
@@ -65,3 +83,5 @@ const resolvers = {
 };
 
 module.exports = resolvers;
+
+// add addSavedCC to mutations

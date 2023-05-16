@@ -24,7 +24,6 @@ const creditCardsSchema = new Schema({
     trim: true,
   },
   ccImage: {
-    // url into string of cloudanary image url
     type: String,
     trim: true,
   },
