@@ -6,6 +6,7 @@ type User {
   username: String
   email: String
   password: String
+  savedCC: [CreditCard]
 }
 
 type CreditCard {
@@ -25,12 +26,13 @@ type CreditCard {
    
 }
 
-  
  type Query {
     creditCards: [CreditCard]
     creditCard(creditCardId: ID): CreditCard
     users: [User]
     user(username: String): User
+    reviews: [Review]
+    review: Review
   }
 
 
@@ -43,6 +45,7 @@ type CreditCard {
     addUser(email: String, username: String, password: String): Auth  
     login(email: String!, password: String!): Auth
     addReview(reviewText: String): Review
+    addSavedCC(CreditCardId: ID): User
 
       
 
@@ -55,3 +58,6 @@ type CreditCard {
 `;
 
 module.exports = typeDefs;
+
+// add remove saved cc
+

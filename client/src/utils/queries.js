@@ -1,5 +1,8 @@
 import { gql } from '@apollo/client';
 
+// what queries do we need?
+// copy paste only here
+
 export const QUERY_PROFILES = gql`
   query allProfiles {
     profiles {

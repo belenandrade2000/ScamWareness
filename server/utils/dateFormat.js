@@ -66,3 +66,4 @@ const addDateSuffix = (date) => {
     return formattedTimeStamp;
   };
   
+  // dont think we need this

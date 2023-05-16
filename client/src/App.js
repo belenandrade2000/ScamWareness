@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -43,6 +42,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      {/* add navbar here */}
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
@@ -62,19 +62,7 @@ function App() {
                 element={<Signup />} 
               />
               <Route 
-                path="/me"
-              />
-              <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />}
-              />
-              <Route 
                 path="/me" 
-
                 element={<Profile />}
               />
               <Route 
@@ -82,9 +70,8 @@ function App() {
                 element={<Profile />}
               />
               <Route 
-
                 path="/creditcards"
-                element={<Profile />}
+                element={<CreditCards />}
               />
 
             </Routes>
