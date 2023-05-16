@@ -69,10 +69,10 @@ function App() {
                 path="/profiles/:username" 
                 element={<Profile />}
               />
-              <Route 
+              {/* <Route 
                 path="/creditcards"
                 element={<CreditCards />}
-              />
+              /> */}
 
             </Routes>
           </div>
