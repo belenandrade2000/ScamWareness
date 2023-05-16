@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // import css file + bootstrap
 //use mern h.w as example
-import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,4 +13,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals();

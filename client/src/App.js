@@ -9,11 +9,13 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Profile from './pages/Profile';
+// import Signup from './pages/Signup';
+// import Login from './pages/Login';
+// import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+// import ccHome from './pages/ccHome';
+// why is it this color?
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -53,7 +55,7 @@ function App() {
                 path="/" 
                 element={<Home />} 
               />
-              <Route 
+              {/* <Route 
                 path="/login" 
                 element={<Login />} 
               />
@@ -71,8 +73,12 @@ function App() {
               />
               <Route 
                 path="/creditcards"
-                element={<CreditCards />}
+                element={<ccHome />}
               />
+              <Route 
+                path="/creditcards/:creditcard"
+                element={<ccHome />}
+              /> */}
 
             </Routes>
           </div>
