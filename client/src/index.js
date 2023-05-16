@@ -6,11 +6,14 @@ import App from './App';
 //use mern h.w as example
 // import reportWebVitals from './reportWebVitals';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
 
 // reportWebVitals();
