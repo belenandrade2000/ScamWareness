@@ -17,20 +17,20 @@ export const LOGIN_USER = gql`
 `;
 
 export const SAVE_CARD = gql`
-  mutation saveCard($cardData: CardInput!) {
-    saveCard(cardData: $cardData) {
-      _id
-      username
-      email
-      savedCards {
-        cardId
-        image
-        description
-        title
-        link
-      }
+mutation Mutation($creditCardId: ID) {
+  addSavedCC(CreditCardId: $creditCardId) {
+    email
+    username
+    savedCC {
+      ccAnnualFee
+      ccBenefits
+      ccImage
+      ccLink
+      ccName
+      ccType
     }
   }
+}
 `;
 
 export const REMOVE_CARD = gql`

@@ -22,6 +22,9 @@ const resolvers = {
     review: async () => {
       return User.find().populate('reviews');
     },
+    me: async(parent, args,context)=> {
+      return User.findOne({username: context.user.username}).populate("creditcards")
+    }
     
    
   },
