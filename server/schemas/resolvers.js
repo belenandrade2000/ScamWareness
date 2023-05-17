@@ -14,7 +14,7 @@ const resolvers = {
       return CreditCards.find();
     },
     creditCard: async (parent, { creditCardId }) => {
-      return CreditCards.findOne({ _id: creditCardId }).populate("creditcards");
+      return CreditCards.findOne({ _id: creditCardId });
     },
     reviews: async () => {
       return User.find().populate('reviews');
@@ -23,7 +23,8 @@ const resolvers = {
       return User.find().populate('reviews');
     },
     me: async(parent, args,context)=> {
-      return User.findOne({username: context.user.username}).populate("creditcards")
+      console.log(context.user)
+      return User.findOne({username: context.user.username}).populate("savedCC")
     }
     
    
