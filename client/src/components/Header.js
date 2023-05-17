@@ -9,10 +9,10 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header>
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+    <header style={{"display": "flex", "flexDirection": "row"}}>
+      <div >
         <Link className="text-dark" to="/">
-          <h1 style={{ "fontSize": '3rem',  }}>
+          <h1 style={{ "fontSize": '3rem',"display": "flex", "justifyContent": "flex-start"}}>
             CardGenie
           </h1>
         </Link>
@@ -28,12 +28,14 @@ const Header = () => {
             </>
           ) : (
             <>
+            <div style={{"display": "flex", "justifyContent": "flex-end"}}>
               <Link className="btn btn-lg btn-primary m-2" to="/login">
                 Login
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
               </Link>
+              </div>
             </>
           )}
         </div>
