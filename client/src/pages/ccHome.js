@@ -6,11 +6,7 @@ import {SAVE_CARD} from "../utils/mutations"
 
 const CCHome = () => {
   const { loading, data } = useQuery(QUERY_CC)
-  const [addSavedCC] = useMutation(SAVE_CARD)
-  // make graphql request
-  // to get credit card data
-  // then map through credit card data
-  // print in the cards 
+  const [addSavedCC] = useMutation(SAVE_CARD) 
   const cardArray = data?.creditCards || {}
 
 function SaveCard (id) {

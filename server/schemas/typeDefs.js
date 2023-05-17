@@ -6,7 +6,7 @@ type User {
   username: String
   email: String
   password: String
-  creditcards: [CreditCard]
+  savedCC: [CreditCard]
 }
 
 type CreditCard {

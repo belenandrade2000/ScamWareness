@@ -27,7 +27,7 @@ export const QUERY_ME = gql`
 query Query {
   me {
     username
-    creditcards {
+    savedCC {
       ccAnnualFee
       ccBenefits
       ccImage
