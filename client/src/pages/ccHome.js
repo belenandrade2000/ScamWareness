@@ -1,43 +1,35 @@
+import React from 'react';
+// its a string before you converrt it into function
+import { useQuery } from '@apollo/client';
+import { QUERY_CC } from "../utils/queries"
 
-//   <div>
-//     <h1>All Credit Cards</h1>
-// <div class="row row-cols-1 row-cols-md-3 g-4">
-//   <div class="col">
-//     <div class="card h-100">
-//       <img src= {} class="card-img-top" >
-//       <div class="card-body">
-//         <h5 class="card-title">Card title</h5>
-//         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="col">
-//     <div class="card h-100">
-//       <img src="..." class="card-img-top" >
-//       <div class="card-body">
-//         <h5 class="card-title">Card title</h5>
-//         <p class="card-text">This is a short card.</p>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="col">
-//     <div class="card h-100">
-//       <img src="..." class="card-img-top" >
-//       <div class="card-body">
-//         <h5 class="card-title">Card title</h5>
-//         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="col">
-//     <div class="card h-100">
-//       <img src="..." class="card-img-top" >
-//       <div class="card-body">
-//         <h5 class="card-title">Card title</h5>
-//         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// </div>
+const CCHome = () => {
+  const { loading, data } = useQuery(QUERY_CC)
+  // make graphql request
+  // to get credit card data
+  // then map through credit card data
+  // print in the cards 
+  const cardArray = data?.creditCards || {}
+  return (
+    <div>
+      <h1>All Credit Cards</h1>
 
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {!loading && cardArray && cardArray.map((card) => {
+          return (
+            <div>
+              {card.ccName},
+              {card.ccType},
+            </div>
+          )
+        })}
+
+
+
+      </div>
+
+    </div>
+  );
+}
+
+export default CCHome;
