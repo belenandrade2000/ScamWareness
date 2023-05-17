@@ -54,7 +54,7 @@ function App() {
     <ApolloProvider client={client}>
       {/* add navbar here */}
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="flex-column justify-flex-start min-100-vh" style ={{"margin": "8px"}}>
           <Header />
           <div>
             <Routes>
