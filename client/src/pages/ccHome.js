@@ -1,16 +1,30 @@
 import React from 'react';
 // its a string before you converrt it into function
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_CC } from "../utils/queries";
-
+import {SAVE_CARD} from "../utils/mutations"
 
 const CCHome = () => {
   const { loading, data } = useQuery(QUERY_CC)
+  const [addSavedCC] = useMutation(SAVE_CARD)
   // make graphql request
   // to get credit card data
   // then map through credit card data
   // print in the cards 
   const cardArray = data?.creditCards || {}
+
+function SaveCard (id) {
+  try {
+    console.log(id)
+    const {data}=addSavedCC({
+      variables:{creditCardId: id}
+    })
+  } catch (error) {
+    
+  }
+}
+
+
   return (
     <div>
       <h1 style={{"textDecoration": "underline"}}>All Credit Cards</h1>
@@ -26,7 +40,7 @@ const CCHome = () => {
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Annual Fee: {card.ccAnnualFee}</h6>
               <p className ="card-text"style={{"fontSize": "20px"}}> Benefits: {card.ccBenefits}</p>
-              <a href={card.ccLink} className="btn btn-primary">Go somewhere</a>
+              <a onClick={()=>SaveCard(card.id)} href="#" className="btn btn-primary">Save</a>
             </div>
             </div>
             </div>

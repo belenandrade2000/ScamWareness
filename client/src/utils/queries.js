@@ -24,13 +24,20 @@ export const QUERY_SINGLE_PROFILE = gql`
 `;
 
 export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      name
-      skills
+query Query {
+  me {
+    username
+    creditcards {
+      ccAnnualFee
+      ccBenefits
+      ccImage
+      ccLink
+      ccName
+      ccType
+      id
     }
   }
+}
 `;
 export const QUERY_USER = gql`
   query me {
@@ -44,6 +51,7 @@ export const QUERY_USER = gql`
 export const QUERY_CC = gql` 
 query Query {
   creditCards {
+    id
     ccAnnualFee
     ccBenefits
     ccImage
