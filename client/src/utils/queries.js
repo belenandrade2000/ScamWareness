@@ -41,3 +41,15 @@ export const QUERY_USER = gql`
     }
   }
 `;
+export const QUERY_CC = gql` 
+query Query {
+  creditCards {
+    ccAnnualFee
+    ccBenefits
+    ccImage
+    ccLink
+    ccName
+    ccType
+  }
+}`
+ 

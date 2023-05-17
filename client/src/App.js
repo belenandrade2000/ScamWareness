@@ -14,7 +14,8 @@ import Home from './pages/Home';
 // import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CreditCard from './pages/ccHome';
+import CreditCard from './pages/CCHome';
+import Demo from "./pages/Demo";
 // why is it this color?
 
 // Construct our main GraphQL API endpoint
@@ -59,6 +60,11 @@ function App() {
                 path="/creditcards"
                 element={<CreditCard />}
               />
+              <Route 
+                path="/demo"
+                element={<Demo />}
+              />
+
               {/* <Route 
                 path="/login" 
                 element={<Login />} 
@@ -78,7 +84,7 @@ function App() {
               {/* 
               <Route 
                 path="/creditcards/:creditcard"
-                element={<ccHome />}
+                element={<CCHome />}
 
               /> */}
 
