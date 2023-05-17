@@ -13,19 +13,21 @@ const CCHome = () => {
   const cardArray = data?.creditCards || {}
   return (
     <div>
-      <h1>All Credit Cards</h1>
+      <h1 style={{"textDecoration": "underline"}}>All Credit Cards</h1>
 
       <div>
         {!loading && cardArray && cardArray.map((card) => {
           return (
-            <div className="card" style={{"width": "18rem"}}>
-              <img src={card.ccImage} className="card-img-top"/>
+            <div> 
+            <div className="card" style={{"width": "18rem", "border": "1px solid black", "padding": "10px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap"}}>
+              <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
               <div className="card-body">
-              <h5 className="card-title">{card.ccName}</h5>
-              <h6 className="card-title">{card.ccType}</h6>
-              <h6 className="card-title">{card.ccAnnualFee}</h6>
-              <p className ="card-text">{card.ccBenefits}</p>
+              <h5 className="card-title" style={{"fontSize": "20px", 'marginBottom': "1px"}}>{card.ccName}</h5>
+              <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>
+              <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Annual Fee: {card.ccAnnualFee}</h6>
+              <p className ="card-text"style={{"fontSize": "20px"}}> Benefits: {card.ccBenefits}</p>
               <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
             </div>
             </div>
           )
