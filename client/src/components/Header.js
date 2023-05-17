@@ -9,21 +9,21 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header style={{"display": "flex", "flexDirection": "row"}}>
-      <div >
+    <header >
+      <div style={{"display": "flex", "flexDirection": "row"}}>
         <Link className="text-dark" to="/">
           <h1 style={{ "fontSize": '3rem',"display": "flex", "justifyContent": "flex-start"}}>
             CardGenie
           </h1>
         </Link>
        
-        <div>
+        <div style={{"display": "flex", "justifyContent": "flex-end"}}>
           {Auth.loggedIn() ? (
             <>
-           <button> Credit Cards</button>
-           <button> Home</button>
-           <button> My Profile</button>
-          <button onClick={logout}>Logout</button>
+           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none", "marginLeft": "3px"}}> Credit Cards</button>
+           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}}> Home</button>
+           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}}> My Profile</button>
+          <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}} onClick={logout}>Logout</button>
 
             </>
           ) : (

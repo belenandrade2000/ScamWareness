@@ -26,7 +26,7 @@ const CCHome = () => {
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Annual Fee: {card.ccAnnualFee}</h6>
               <p className ="card-text"style={{"fontSize": "20px"}}> Benefits: {card.ccBenefits}</p>
-              <a href="#" className="btn btn-primary">Go somewhere</a>
+              <a href={card.ccLink} className="btn btn-primary">Go somewhere</a>
             </div>
             </div>
             </div>
