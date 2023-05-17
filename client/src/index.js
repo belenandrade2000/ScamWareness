@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import css file + bootstrap
-//use mern h.w as example
+'bootstrap/dist/css/bootstrap.css';
 // import reportWebVitals from './reportWebVitals';
 
 

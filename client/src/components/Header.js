@@ -12,7 +12,7 @@ const Header = () => {
     <header>
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          <h1 style={{ "fontSize": '3rem',  }}>
             CardGenie
           </h1>
         </Link>

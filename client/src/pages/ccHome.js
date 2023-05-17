@@ -1,7 +1,8 @@
 import React from 'react';
 // its a string before you converrt it into function
 import { useQuery } from '@apollo/client';
-import { QUERY_CC } from "../utils/queries"
+import { QUERY_CC } from "../utils/queries";
+
 
 const CCHome = () => {
   const { loading, data } = useQuery(QUERY_CC)
@@ -12,20 +13,25 @@ const CCHome = () => {
   const cardArray = data?.creditCards || {}
   return (
     <div>
-      <h1>All Credit Cards</h1>
+      <h1 style={{"textDecoration": "underline"}}>All Credit Cards</h1>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div>
         {!loading && cardArray && cardArray.map((card) => {
           return (
-            <div>
-              {card.ccName},
-              {card.ccType},
+            <div> 
+            <div className="card" style={{"width": "18rem", "border": "1px solid black", "padding": "10px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap"}}>
+              <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
+              <div className="card-body">
+              <h5 className="card-title" style={{"fontSize": "20px", 'marginBottom': "1px"}}>{card.ccName}</h5>
+              <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>
+              <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Annual Fee: {card.ccAnnualFee}</h6>
+              <p className ="card-text"style={{"fontSize": "20px"}}> Benefits: {card.ccBenefits}</p>
+              <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
             </div>
           )
         })}
-
-
-
       </div>
 
     </div>
