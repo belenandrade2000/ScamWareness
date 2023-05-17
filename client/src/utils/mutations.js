@@ -15,22 +15,37 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-// need help with these two
-export const ADD_SAVEDCC = gql`
-  mutation addCC($profileId: ID!, $skill: String!) {
-    addCC(profileId: $profileId, skill: $skill) {
+
+export const SAVE_CARD = gql`
+  mutation saveCard($cardData: CardInput!) {
+    saveCard(cardData: $cardData) {
       _id
-      name
-      skills
+      username
+      email
+      savedCards {
+        cardId
+        image
+        description
+        title
+        link
+      }
     }
   }
 `;
-export const REMOVE_SAVEDCC = gql`
-  mutation removeCC($skill: String!) {
-    removeCC(skill: $skill) {
+
+export const REMOVE_CARD = gql`
+  mutation removeCard($cardId: ID!) {
+    removeCard(cardId: $cardId) {
       _id
-      name
-      skills
+      username
+      email
+      savedCards {
+        cardId
+        image
+        description
+        title
+        link
+      }
     }
   }
 `;
