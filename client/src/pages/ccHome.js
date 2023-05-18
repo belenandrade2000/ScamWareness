@@ -29,7 +29,7 @@ function SaveCard (id) {
         {!loading && cardArray && cardArray.map((card) => {
           return (
             <div> 
-            <div className="card" style={{"width": "18rem", "border": "1px solid black", "padding": "10px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap"}}>
+            <div className="card" style={{"width": "22rem", "border": "1px solid black", "padding": "10px 20px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap", "margin": "10px", "backgroundColor": "#A0B5F9"}}>
               <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
               <div className="card-body">
               <h5 className="card-title" style={{"fontSize": "20px", 'marginBottom': "1px"}}>{card.ccName}</h5>
@@ -49,3 +49,9 @@ function SaveCard (id) {
 }
 
 export default CCHome;
+
+
+
+// background-color: #e5e5f7;
+// opacity: 0.8;
+// background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 36px ), repeating-linear-gradient( #a2c5fb55, #a2c5fb );

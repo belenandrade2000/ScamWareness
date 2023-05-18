@@ -9,7 +9,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header >
+    <header>
       <div style={{"display": "flex", "flexDirection": "row"}}>
         <Link className="text-dark" to="/">
           <h1 style={{ "fontSize": '3rem',"display": "flex", "justifyContent": "flex-start"}}>
@@ -17,22 +17,22 @@ const Header = () => {
           </h1>
         </Link>
        
-        <div style={{"display": "flex", "justifyContent": "flex-end"}}>
+        <div style={{"position": "relative", "left": "55%"}}>
           {Auth.loggedIn() ? (
             <>
-           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none", "marginLeft": "3px"}}> Credit Cards</button>
-           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}}> Home</button>
-           <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}}> My Profile</button>
-          <button style={{"backgroundColor": "blue", "borderRadius": "5px", "color": "white", "border": "none",  "marginLeft": "3px"}} onClick={logout}>Logout</button>
+            <Link className="btn btn-dark" to="/creditcards" style ={{"marginLeft": "6px"}}>CreditCards</Link>
+            <Link className="btn btn-dark" to="/" style ={{"marginLeft": "6px"}}>Home</Link>
+            <Link className="btn btn-dark" to="/me" style ={{"marginLeft": "6px"}}>My Profile</Link>
+          <button className="btn btn-dark" style ={{"marginLeft": "6px"}} onClick={logout}>Logout</button>
 
             </>
           ) : (
             <>
-            <div style={{"display": "flex", "justifyContent": "flex-end"}}>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+            <div>
+              <Link className="btn btn-dark" to="/login" style ={{"margin": "5px"}}>
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-dark" to="/signup">
                 Signup
               </Link>
               </div>
