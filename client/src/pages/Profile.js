@@ -51,7 +51,7 @@ return (
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Annual Fee: {card.ccAnnualFee}</h6>
               <p className ="card-text"style={{"fontSize": "20px"}}> Benefits: {card.ccBenefits}</p>
-              {/* <a onClick={()=>SaveCard(card.id)} href="#" className="btn btn-primary">Save</a> */}
+              <a href={card.ccLink} className="btn btn-primary">Apply</a>
             </div>
             </div>
             </div>
