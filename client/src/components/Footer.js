@@ -16,7 +16,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4 style={{"position": "absolute", "bottom": 0, "textAlign": "center"}}>&copy; CardGenie</h4>
+        <h4 style={{"position": "relative", "bottom": 0, "textAlign": "center"}}>&copy; CardGenie</h4>
       </div>
     </footer>
   );
