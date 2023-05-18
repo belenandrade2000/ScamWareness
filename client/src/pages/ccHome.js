@@ -1,5 +1,4 @@
 import React from 'react';
-// its a string before you converrt it into function
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_CC } from "../utils/queries";
 import {SAVE_CARD} from "../utils/mutations"
