@@ -47,14 +47,12 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      {/* add navbar here */}
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh" style ={{"margin": "8px"}}>
+        <div  style ={{"margin": "8px"}}>
           <Header />
           <div>
             <Routes>
               <Route 
-
                 path="/" 
                 element={<Home />} 
               />
