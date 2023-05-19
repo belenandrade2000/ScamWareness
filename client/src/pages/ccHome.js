@@ -27,6 +27,7 @@ function SaveCard (id) {
       <div style = {{display:"flex", width:"100%","flexWrap": "wrap",}}>
         {!loading && cardArray && cardArray.map((card) => {
           return (
+
             <div className="card" style={{"width": "32%", "border": "1px solid black", "padding": "10px 20px", "flex": "0 0 31%", "margin": "10px", "backgroundColor": "#A0B5F9"}}>
               <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
               <div className="card-body">
