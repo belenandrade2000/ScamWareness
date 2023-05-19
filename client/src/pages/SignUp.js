@@ -41,8 +41,8 @@ const Signup = () => {
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+        <div className="card" style={{backgroundImage: "url(https://hips.hearstapps.com/hmg-prod/images/findtherightcreditcard-64356cd10e2c0.jpg?resize=2048:*)", "padding": "40px 20px 60px 20px", marginLeft: "20px"}}>
+          <h4 className="card-header text-light p-2" style={{textAlign: "center", backgroundColor: "#f19a6e"}}>Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -50,23 +50,24 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} style={{display: "flex", flexDirection: "column"}}>
+                Username:
                 <input
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
-                />
+                /> Email:
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="email@gmail.com"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
-                />
+                /> Password:
                 <input
                   className="form-input"
                   placeholder="******"
@@ -76,8 +77,8 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  className="btn btn-block"
+                  style={{ cursor: 'pointer', backgroundColor: "black", marginTop: "20px", "color": "white"}}
                   type="submit"
                 >
                   Submit
