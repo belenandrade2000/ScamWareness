@@ -14,7 +14,7 @@ Explore Comprehensive Card Profiles:
 Each credit card on CardGenie comes with a detailed profile, providing you with valuable information and insights. From annual fees and interest rates to rewards programs, signup bonuses, and introductory offers, CardGenie ensures you have all the essential details at your disposal to make an informed decision.
 
 Benefit Comparison and Ranking:
- You can easily save cards to your profile to compare the benefits, features, and terms of multiple credit cards side by side. 
+You can easily save cards to your profile to compare the benefits, features, and terms of multiple credit cards side by side. 
 
 CardGenie is your trusted companion on the journey to finding the ideal credit card. Simplify your search, explore endless possibilities, and make well-informed financial decisions with confidence. Experience the power of CardGenie today and unlock a world of credit card options that are tailored to your financial goals and lifestyle.
 
@@ -38,7 +38,8 @@ Navigate to http://localhost:3000 to view the website.
 
 Once you have installed all the necessary dependencies, you will be directed to the local server and application allowing you to use CardGenie and it's features. You will be required to create a username and password by signing up with an email address. After signing up, you can begin browsing CardGenie to browse all credit cards available in the database. You can also save each card to your profile to compare which cards are best suited for your needs. 
 
-![Click for Preview]()
+![Screen Shot 2023-05-19 at 10 03 38 AM](https://github.com/belenandrade2000/card-genie/assets/126382072/1fba0c33-ed08-4e8c-98e3-ed01f022959e)
+
 
 ## Credits
 
@@ -47,31 +48,4 @@ Once you have installed all the necessary dependencies, you will be directed to 
 * [Emin Martirosyan](https://github.com/em1nm)
 
 ## Deployment
-
-
-=======
-This web application is designed to simplify the process of finding the perfect credit card that suits your needs. It provides a variety of credit card options with different benefits, allowing you to compare and save them to your profile for further analysis.
-
-## Features
-Extensive Credit Card Selection: CardGenie offers a wide range of credit cards with various benefits such as cashback rewards, travel perks, and low-interest rates. Explore the collection to find cards that align with your financial goals.
-
-Easy Card Comparison: The user-friendly interface allows you to compare multiple credit cards side by side. Quickly view and analyze essential details such as annual fees, interest rates, rewards programs, and more.
-
-Profile: Create a profile on CardGenie to save your preferred cards. This feature enables you to conveniently revisit and evaluate them whenever you're ready to make a final decision.
-
-## Technologies Used
-Front-end:
-HTML
-CSS
-JavaScript
-React
-
-Back-end:
-Node.js
-Express.js
-MongoDB
-
-## Links
-https://github.com/nwalk33?tab=repositories
-
 
