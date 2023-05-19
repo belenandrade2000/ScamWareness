@@ -27,6 +27,10 @@ const creditCardsSchema = new Schema({
     type: String,
     trim: true,
   },
+  ccLink: {
+    type: String,
+    trim: true,
+  },
   reviews: [{
     type: Schema.Types.ObjectId,
     ref: "Review"
