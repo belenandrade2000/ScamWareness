@@ -44,7 +44,7 @@ return (
         {!loading && user.savedCC && user.savedCC.map((card) => {
           return (
             <div> 
-            <div className="card" style={{"width": "32%", "padding": "10px", "flex": "0 0 31%", "margin": "10px", "border": "2px solid black", "backgroundColor" : "aqua"}}>
+            <div className="card" style={{"width": "32%", "padding": "10px", "flex": "0 0 31%", "margin": "10px", "border": "2px solid black"}}>
             <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
               <div className="card-body">
               <h5 className="card-title" style={{"fontSize": "20px", 'marginBottom': "1px"}}>{card.ccName}</h5>
