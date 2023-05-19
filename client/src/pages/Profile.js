@@ -38,14 +38,14 @@ const Profile = () => {
 
 return (
   <div> 
-    <h1> My Saved Credit Cards</h1> 
+    <h1 style={{fontSize: "25px"}}> My Saved Credit Cards</h1> 
 
-    <div>
+    <div style ={{backgroundImage: "url(https://cdn.pixabay.com/photo/2020/10/17/12/48/money-5661928_960_720.png)"}}>
         {!loading && user.savedCC && user.savedCC.map((card) => {
           return (
             <div> 
-            <div className="card" style={{"width": "18rem", "border": "1px solid black", "padding": "10px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap"}}>
-              <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
+            <div className="card" style={{"width": "32%", "padding": "10px", "flex": "0 0 31%", "margin": "10px", "border": "2px solid black"}}>
+            <img src={card.ccImage} className="card-img-top"style={{"height": "200px", "width": "300px"}}/>
               <div className="card-body">
               <h5 className="card-title" style={{"fontSize": "20px", 'marginBottom': "1px"}}>{card.ccName}</h5>
               <h6 className="card-title"style={{"fontSize": "20px", "fontWeight": "normal"}}>Type: {card.ccType}</h6>

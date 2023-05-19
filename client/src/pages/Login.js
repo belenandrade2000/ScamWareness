@@ -43,9 +43,9 @@ const Login = (props) => {
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+        <div className="card" style={{backgroundImage: "url(https://hips.hearstapps.com/hmg-prod/images/findtherightcreditcard-64356cd10e2c0.jpg?resize=2048:*)", "padding": "30px 20px 60px 20px", marginLeft: "20px"}}>
+          <h4 className="card-header text-light p-2" style={{textAlign: "center", backgroundColor: "#f19a6e", marginBottom: "10px", }}>Login</h4>
+          <div className="card-body" style={{textAlign: "center"}}>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -53,14 +53,15 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                Email:
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
-                />
+                /> Password:
                 <input
                   className="form-input"
                   placeholder="******"
@@ -71,7 +72,7 @@ const Login = (props) => {
                 />
                 <button
                   className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'pointer', marginLeft: "10px",backgroundColor: "black" }}
                   type="submit"
                 >
                   Submit

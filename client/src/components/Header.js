@@ -11,8 +11,8 @@ const Header = () => {
   return (
     <header>
       <div style={{"display": "flex", "flexDirection": "row"}}>
-        <Link className="text-dark" to="/">
-          <h1 style={{ "fontSize": '3rem',"display": "flex", "justifyContent": "flex-start"}}>
+        <Link to="/">
+          <h1 style={{ "fontSize": '3rem',"display": "flex", "justifyContent": "flex-start", "fontFamily": "Amita, cursive", "color": "black"}}>
             CardGenie
           </h1>
         </Link>
