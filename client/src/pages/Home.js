@@ -9,8 +9,7 @@ const styles = {
     border: "2px solid black",
     textDecoration: "none",
     borderRadius: "8%",
-    padding: "2px 5px 2px 5px",
-    marginTop: "30px",
+    padding: "2px 5px 2px 5px"
   },
 
 }
