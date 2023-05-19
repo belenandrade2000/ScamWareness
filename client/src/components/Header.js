@@ -17,7 +17,8 @@ const Header = () => {
           </h1>
         </Link>
        
-        <div style={{"position": "relative", "left": "55%"}}>
+       
+        <div style={{"position": "relative", "left": "50%"}}>
           {Auth.loggedIn() ? (
             <>
             <Link className="btn btn-dark" to="/creditcards" style ={{"marginLeft": "6px"}}>CreditCards</Link>
