@@ -49,3 +49,6 @@ Once you have installed all the necessary dependencies, you will be directed to 
 
 ## Deployment
 
+https://shrouded-reaches-01960.herokuapp.com/
+
+https://github.com/belenandrade2000/card-genie
